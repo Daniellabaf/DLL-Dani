@@ -1,0 +1,95 @@
+// dllmain.cpp : Defines the entry point for the DLL application.
+#include "pch.h"
+#include "windows.h"
+#pragma comment(linker,"/export:curl_easy_cleanup=gup.curl_easy_cleanup,@1")
+#pragma comment(linker,"/export:curl_easy_duphandle=gup.curl_easy_duphandle,@2")
+#pragma comment(linker,"/export:curl_easy_escape=gup.curl_easy_escape,@3")
+#pragma comment(linker,"/export:curl_easy_getinfo=gup.curl_easy_getinfo,@4")
+#pragma comment(linker,"/export:curl_easy_init=gup.curl_easy_init,@5")
+#pragma comment(linker,"/export:curl_easy_pause=gup.curl_easy_pause,@6")
+#pragma comment(linker,"/export:curl_easy_perform=gup.curl_easy_perform,@7")
+#pragma comment(linker,"/export:curl_easy_recv=gup.curl_easy_recv,@8")
+#pragma comment(linker,"/export:curl_easy_reset=gup.curl_easy_reset,@9")
+#pragma comment(linker,"/export:curl_easy_send=gup.curl_easy_send,@10")
+#pragma comment(linker,"/export:curl_easy_setopt=gup.curl_easy_setopt,@11")
+#pragma comment(linker,"/export:curl_easy_strerror=gup.curl_easy_strerror,@12")
+#pragma comment(linker,"/export:curl_easy_unescape=gup.curl_easy_unescape,@13")
+#pragma comment(linker,"/export:curl_escape=gup.curl_escape,@14")
+#pragma comment(linker,"/export:curl_formadd=gup.curl_formadd,@15")
+#pragma comment(linker,"/export:curl_formfree=gup.curl_formfree,@16")
+#pragma comment(linker,"/export:curl_formget=gup.curl_formget,@17")
+#pragma comment(linker,"/export:curl_free=gup.curl_free,@18")
+#pragma comment(linker,"/export:curl_getdate=gup.curl_getdate,@19")
+#pragma comment(linker,"/export:curl_getenv=gup.curl_getenv,@20")
+#pragma comment(linker,"/export:curl_global_cleanup=gup.curl_global_cleanup,@21")
+#pragma comment(linker,"/export:curl_global_init=gup.curl_global_init,@22")
+#pragma comment(linker,"/export:curl_global_init_mem=gup.curl_global_init_mem,@23")
+#pragma comment(linker,"/export:curl_global_sslset=gup.curl_global_sslset,@24")
+#pragma comment(linker,"/export:curl_maprintf=gup.curl_maprintf,@25")
+#pragma comment(linker,"/export:curl_mfprintf=gup.curl_mfprintf,@26")
+#pragma comment(linker,"/export:curl_mime_addpart=gup.curl_mime_addpart,@27")
+#pragma comment(linker,"/export:curl_mime_data=gup.curl_mime_data,@28")
+#pragma comment(linker,"/export:curl_mime_data_cb=gup.curl_mime_data_cb,@29")
+#pragma comment(linker,"/export:curl_mime_encoder=gup.curl_mime_encoder,@30")
+#pragma comment(linker,"/export:curl_mime_filedata=gup.curl_mime_filedata,@31")
+#pragma comment(linker,"/export:curl_mime_filename=gup.curl_mime_filename,@32")
+#pragma comment(linker,"/export:curl_mime_free=gup.curl_mime_free,@33")
+#pragma comment(linker,"/export:curl_mime_headers=gup.curl_mime_headers,@34")
+#pragma comment(linker,"/export:curl_mime_init=gup.curl_mime_init,@35")
+#pragma comment(linker,"/export:curl_mime_name=gup.curl_mime_name,@36")
+#pragma comment(linker,"/export:curl_mime_subparts=gup.curl_mime_subparts,@37")
+#pragma comment(linker,"/export:curl_mime_type=gup.curl_mime_type,@38")
+#pragma comment(linker,"/export:curl_mprintf=gup.curl_mprintf,@39")
+#pragma comment(linker,"/export:curl_msnprintf=gup.curl_msnprintf,@40")
+#pragma comment(linker,"/export:curl_msprintf=gup.curl_msprintf,@41")
+#pragma comment(linker,"/export:curl_multi_add_handle=gup.curl_multi_add_handle,@42")
+#pragma comment(linker,"/export:curl_multi_assign=gup.curl_multi_assign,@43")
+#pragma comment(linker,"/export:curl_multi_cleanup=gup.curl_multi_cleanup,@44")
+#pragma comment(linker,"/export:curl_multi_fdset=gup.curl_multi_fdset,@45")
+#pragma comment(linker,"/export:curl_multi_info_read=gup.curl_multi_info_read,@46")
+#pragma comment(linker,"/export:curl_multi_init=gup.curl_multi_init,@47")
+#pragma comment(linker,"/export:curl_multi_perform=gup.curl_multi_perform,@48")
+#pragma comment(linker,"/export:curl_multi_remove_handle=gup.curl_multi_remove_handle,@49")
+#pragma comment(linker,"/export:curl_multi_setopt=gup.curl_multi_setopt,@50")
+#pragma comment(linker,"/export:curl_multi_socket=gup.curl_multi_socket,@51")
+#pragma comment(linker,"/export:curl_multi_socket_action=gup.curl_multi_socket_action,@52")
+#pragma comment(linker,"/export:curl_multi_socket_all=gup.curl_multi_socket_all,@53")
+#pragma comment(linker,"/export:curl_multi_strerror=gup.curl_multi_strerror,@54")
+#pragma comment(linker,"/export:curl_multi_timeout=gup.curl_multi_timeout,@55")
+#pragma comment(linker,"/export:curl_multi_wait=gup.curl_multi_wait,@56")
+#pragma comment(linker,"/export:curl_mvaprintf=gup.curl_mvaprintf,@57")
+#pragma comment(linker,"/export:curl_mvfprintf=gup.curl_mvfprintf,@58")
+#pragma comment(linker,"/export:curl_mvprintf=gup.curl_mvprintf,@59")
+#pragma comment(linker,"/export:curl_mvsnprintf=gup.curl_mvsnprintf,@60")
+#pragma comment(linker,"/export:curl_mvsprintf=gup.curl_mvsprintf,@61")
+#pragma comment(linker,"/export:curl_pushheader_byname=gup.curl_pushheader_byname,@62")
+#pragma comment(linker,"/export:curl_pushheader_bynum=gup.curl_pushheader_bynum,@63")
+#pragma comment(linker,"/export:curl_share_cleanup=gup.curl_share_cleanup,@64")
+#pragma comment(linker,"/export:curl_share_init=gup.curl_share_init,@65")
+#pragma comment(linker,"/export:curl_share_setopt=gup.curl_share_setopt,@66")
+#pragma comment(linker,"/export:curl_share_strerror=gup.curl_share_strerror,@67")
+#pragma comment(linker,"/export:curl_slist_append=gup.curl_slist_append,@68")
+#pragma comment(linker,"/export:curl_slist_free_all=gup.curl_slist_free_all,@69")
+#pragma comment(linker,"/export:curl_strequal=gup.curl_strequal,@70")
+#pragma comment(linker,"/export:curl_strnequal=gup.curl_strnequal,@71")
+#pragma comment(linker,"/export:curl_unescape=gup.curl_unescape,@72")
+#pragma comment(linker,"/export:curl_version=gup.curl_version,@73")
+#pragma comment(linker,"/export:curl_version_info=gup.curl_version_info,@74")
+BOOL APIENTRY DllMain( HMODULE hModule,
+                       DWORD  ul_reason_for_call,
+                       LPVOID lpReserved
+                     )
+{
+    switch (ul_reason_for_call)
+    {
+    case DLL_PROCESS_ATTACH:
+        MessageBoxW(NULL, L"dani", L"daniel", 0);
+        break;
+    case DLL_THREAD_ATTACH:
+    case DLL_THREAD_DETACH:
+    case DLL_PROCESS_DETACH:
+        break;
+    }
+    return TRUE;
+}
+
